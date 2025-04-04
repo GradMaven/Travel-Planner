@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom'; // Removed BrowserRouter import
 import Navbar from './components/Navbar';
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
@@ -30,9 +30,7 @@ function Layout() {
 
 function App() {
   return (
-    <Router>
-      <Layout />
-    </Router>
+    <Layout /> 
   );
 }
 
