@@ -1,22 +1,41 @@
-import "./App.css"
-import HeroSection from './components/HeroSection'
-import Navbar from './components/NavBar'
-import {Home} from './pages/Home'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, useLocation } from 
+'react-router-dom';
+import Navbar from './components/Navbar';
+import Login from "./components/Login";
+import SignUp from "./components/SignUp";
+import Home from './pages/Home';
+import "./App.css";
+import Itinerary from './components/plan/Itinerary';
+import Accommodation from './components/plan/Accommodation';
+import UserProfile from './components/UserProfile';
 
 
-function App() {
- 
+
+function Layout () {
+  const location = useLocation();
 
   return (
     <>
-      <HeroSection />
-      <Navbar />
-      <Routes>
-      <Route path='/' element={Home} />
-    </Routes>
-      
+  
+    {location.pathname !== "/login" && <Navbar />}
+   
+      <Routes> 
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path ="/userprofile" element= {<UserProfile />}/>
+        <Route path ="/itinerary" element = {<Itinerary />} />
+        <Route path ="/accommodation" element = {<Accommodation />} />
+    </Routes >  
+ 
     </>
+      
   )
+}
+
+function App() {
+  return <Layout />
 }
 
 export default App

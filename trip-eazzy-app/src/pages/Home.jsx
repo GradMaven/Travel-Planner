@@ -1,13 +1,20 @@
 import React from 'react';
-import '../../src/App.css';
 import HeroSection from '../components/HeroSection';
-import '../App';
+import Card from '../components/Card';
+import CardPlanner from '../components/CardPlanner';
+import GetApp from '../components/GetApp';
+import Footer from '../components/Footer';
 
-function Home() {
+
+const Home = () => {
     return (
         <>
        
-        <HeroSection />
+      <HeroSection />
+      <Card />
+      <CardPlanner />
+      <GetApp />
+      <Footer />
       
         
         </>

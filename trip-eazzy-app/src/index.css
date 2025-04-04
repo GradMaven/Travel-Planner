@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "tailwindcss/preflight";
+@import"utilities";
+
+body {
+  @apply box-border m-0 p-0 font-pt-sans;
+}
+
+
+html {
+    scroll-behavior: smooth;
+  }
+  
