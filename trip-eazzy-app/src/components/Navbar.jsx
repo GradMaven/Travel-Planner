@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react'; // For hamburger icons
@@ -37,7 +36,6 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        
         <div>
           <img
             src="/trip-ez-logo.svg"
@@ -63,51 +61,10 @@ const Navbar = () => {
             href="#contact"
             className="text-[#03023C] hover:text-[#F5F5F5] transition duration-300"
           >
-=======
-import React, { useState, useEffect }  from 'react';
-
-
-const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  return (
-    <nav className={` top-0 left-0 w-full h-25 z-50 sticky transition duration-300 ${
-      isScrolled ? 'bg-[#BF6A02] shadow-lg' : 'bg-[#D9D9D9]'
-    }`}>
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-     
-        <div >
-          <img src="/trip-ez-logo.svg" alt="logo" className='h-18, w-18 rounded-full object-cover' />
-        </div>
-        <div className="hidden md:flex space-x-10">
-          <a href="#about" className="text-[#03023C] hover:text-[#F5F5F5] transition duration-300">
-            About Us
-          </a>
-          <a href="#blog" className="text-[#03023C] hover:text-[#F5F5F5] transition duration-300">
-            Blog
-          </a>
-          <a href="#contact" className="text-[#03023C] hover:text-[#F5F5F5] transition duration-300">
->>>>>>> 390f080ff0a63be64e1a323dfdafb170667482b3
             Contact Us
           </a>
         </div>
 
-<<<<<<< HEAD
         <div className="hidden md:flex items-center space-x-4">
           <button
             onClick={handleLoginClick}
@@ -119,25 +76,21 @@ const Navbar = () => {
             onClick={handleSignupClick}
             className="bg-[#BF6A02] text-white px-4 py-2 rounded-lg hover:bg-[#03023C] transition duration-300"
           >
-=======
-        <div className="flex items-center space-x-6">
-          <button className="bg-[#D9D9D9] text-[#03023C] px-6 py-2 rounded-lg ring-inset hover:ring-4 hover:border-[#03023C]  transition duration-300">
-            Login
-          </button>
-          <button className="bg-[#BF6A02] text-white px-6 py-2 rounded-lg hover:bg-[#03023C] transition duration-300">
->>>>>>> 390f080ff0a63be64e1a323dfdafb170667482b3
             Sign Up
           </button>
         </div>
 
         <div className="md:hidden">
           <button onClick={toggleMenu} aria-label="Toggle Menu">
-            {menuOpen ? <X className="w-6 h-6 text-[#03023C]" /> : <Menu className="w-6 h-6 text-[#03023C]" />}
+            {menuOpen ? (
+              <X className="w-6 h-6 text-[#03023C]" />
+            ) : (
+              <Menu className="w-6 h-6 text-[#03023C]" />
+            )}
           </button>
         </div>
       </div>
 
-   
       {menuOpen && (
         <div className="md:hidden px-6 pb-4 space-y-4 text-sm">
           <a
